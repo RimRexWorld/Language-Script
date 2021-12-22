@@ -10,14 +10,17 @@ $RegionalSettings = "D:\CH-Region.xml"
 
 
 #downdload regional settings file
+Write-Host "Language File wird heruntergeladen"
 $webclient = New-Object System.Net.WebClient
 $webclient.DownloadFile($regionalsettingsURL,$RegionalSettings)
 
 
 # Set Locale, language etc. 
+Write-Host "Language Default Configuration"
 & $env:SystemRoot\System32\control.exe "intl.cpl,,/f:`"$RegionalSettings`""
 
 # Set languages/culture. Not needed perse.
+Write-Host "Language Settings"
 Set-WinSystemLocale de-CH
 Set-WinUserLanguageList -LanguageList de-CH -Force
 Set-Culture -CultureInfo de-CH
