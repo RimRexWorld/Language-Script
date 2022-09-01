@@ -2,7 +2,7 @@
 
 ######################################33
 
-Set-ExecutionPolicy -ExecutionPolicy Bypass
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Force
 
 #variables
 $regionalsettingsURL = "https://raw.githubusercontent.com/RimRexWorld/Language-Script/main/ch-Region.xml"
